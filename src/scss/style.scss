@@ -1,13 +1,147 @@
-
 * {
   margin: 0;
   padding: 0;
   list-style: none;
   outline: none;
-  font-family: 'Roboto', 'Segoe UI', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+  font-family: "Montserrat", sans-serif, "Roboto", "Segoe UI", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
+}
+
+.header {
+  margin: 25px 60px 30px 60px;
+
+  &__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+  }
+
+  &__nav {
+    flex: 1 1 auto;
+
+    &-body {
+    }
+
+    &-menu {
+      display: flex;
+      justify-content: center;
+
+      li {
+        margin-right: 50px;
+      }
+    }
+
+    &-link {
+      text-decoration: none;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 18px;
+      color: #000000;
+
+      &__active {
+        color: #e51937;
+        border-bottom: 2px solid #e51937;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+
+    a {
+      margin-right: 30px;
+    }
+
+    &-shop {
+      @extend .header__nav-link;
+    }
+
+    &-logout {
+      @extend .header__nav-link;
+    }
+  }
+}
+
+.main {
+  .banner {
+    background-size: contain;
+    &__container {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+
+    &__text {
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+      h2 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 90px;
+        line-height: 110px;
+      }
+      p {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+      }
+    }
+
+    &__img {
+      display: block;
+    }
+
+    &__specifications {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      &-item {
+        display: flex;
+        align-items: center;
+        margin-right: 80px;
+        &-text {
+          h2 {
+            font-size: 35px;
+          }
+        }
+        &-img {
+          margin-right: 10px;
+          height: 42px;
+        }
+      }
+      &-test {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 40px;
+        img {
+          margin-right: 5px;
+        }
+      }
+      &-button {
+        color: #e51937;
+        border: 2px solid #e51937;
+        text-decoration: none;
+        padding: 11px 30px;
+      }
+    }
+    &__arrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 5rem;
+    }
+  }
 }
