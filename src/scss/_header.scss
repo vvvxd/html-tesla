@@ -1,0 +1,54 @@
+.header {
+  margin: 25px 60px 30px 60px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav {
+    flex: 1 1 auto;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+  }
+}
+.nav {
+  &__menu {
+    display: flex;
+    justify-content: center;
+
+    li {
+      margin-right: 50px;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+
+    &_active {
+      color: #e51937;
+      border-bottom: 2px solid #e51937;
+    }
+  }
+}
+
+.actions {
+  a {
+    margin-right: 30px;
+  }
+
+  &__shop {
+    @extend .nav__link;
+  }
+
+  &__logout {
+    @extend .nav__link;
+  }
+}
